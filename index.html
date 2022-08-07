@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Conversor de monedas</title>
+  </head>
+
+  <body>
+    <p id="error">Waiting for server response</p>
+
+    <div class="container">
+      <hr />
+      <h1>Conversor de monedas Nacional</h1>
+      <hr />
+
+      <div class="box">
+        <div class="sub">
+          <h2>Pesos CLP</h2>
+        </div>
+
+        <div class="inp">
+          <input
+            id="inputAmount"
+            type="number"
+            placeholder="Ingrese Monto en CLP"
+          />
+        </div>
+
+        <p>Moneda a Convertir</p>
+
+        <select
+          class="selector"
+          id="selectTypeMoney"
+          type="text"
+          placeholder="Money"
+        >
+          <option value="Seleccione Moneda">Seleccione Moneda</option>
+          <option value="dolar">Dolar</option>
+          <option value="uf">UF</option>
+          <option value="euro">Euro</option>
+          <option value="bitcoin">Bitcoin</option>
+          -->
+        </select>
+
+        <button id="btn">Currency conversion</button>
+        <p id="result">....</p>
+      </div>
+
+      <div>
+        <canvas id="myChart" width="1000" height="400"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
