@@ -33,4 +33,43 @@ async function ConectionServer() {
        document.querySelector("#result").innerHTML= "....";
     }
   }
+  // -------------------------------------------------------------------------------------------------
+
+//function to configure the graph
+function chartRender(datLabel, datChange) {
+  
+    const ctx = document.getElementById('myChart').getContext('2d');
+    if (myChart != null) {
+      myChart.destroy();
+    }
+    myChart = new Chart(ctx, {
+      type: 'bar',
+  
+      data: {
+        labels: datLabel.reverse(),
+        datasets: [
+          {
+            label: `Valor: ${currency.toUpperCase()}`,
+            data: datChange.reverse(),
+            backgroundColor: ['rgba(31, 147, 62, 0.2)'],
+            borderColor: ['rgba(255, 99, 132, 1)'],
+            borderWidth: 1,
+          },
+        ],
+      },
+      options: {
+        maintainAspectRatio: false,
+        responsive: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+          x: {
+            beginAtZero: true,
+          },
+        },
+      },
+    })
+  };
+  
   
