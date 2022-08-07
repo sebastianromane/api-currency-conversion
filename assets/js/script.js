@@ -72,4 +72,24 @@ function chartRender(datLabel, datChange) {
     })
   };
   
+// -------------------------------------------------------------------------------------------------
+//function to calculate the equivalence in pesos according to the type of currency.
+function calculation () {
+    let result = Number((inputAmount.value / lastchange).toFixed(2));
   
+    document.querySelector("#result").innerHTML= "Resultado  :  " + result;
+  }
+  
+  btn.addEventListener("click", () =>{
+    if (inputAmount.value=="") {
+      alert("Debe ingresar un valor")
+      return;
+    }
+  
+    if (isNaN(inputAmount.value)) {
+      alert('Solo puedes ingresar valores numéricos en la cantidad aconvertir')
+      return;
+    }
+  
+    ConectionServer();
+  })
